@@ -3,4 +3,13 @@ __pycache__/
 .pytest_cache/
 *.py[cod]
 .env
+.env.local
 .DS_Store
+
+# Frontend
+node_modules/
+dist/
+.vite/
+frontend/.env
+frontend/.env.local
+*.log

@@ -1,6 +1,13 @@
+# HTTP API (frontend integration)
+fastapi>=0.110
+uvicorn[standard]>=0.29
 
+# Preserved Streamlit application
 streamlit
 pandas
 numpy
 plotly>=5.0.0
+
+# Testing (pytest + FastAPI TestClient)
 pytest
+httpx
