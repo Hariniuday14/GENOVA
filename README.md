@@ -288,3 +288,45 @@ No secrets are used or exposed; all analysis runs locally.
 - No external annotation, population, or clinical databases are queried.
 - Evaluation covers a single seeded synthetic case. It demonstrates the pipeline and
   cannot estimate accuracy, generalisation, or clinical performance.
+
+## Evaluation and Data Delivery (Member 3)
+
+### Synthetic benchmark
+
+Run the labelled synthetic benchmark:
+
+```powershell
+python synthetic_benchmark.py
+```
+
+The benchmark writes its report to
+`synthetic_benchmark_results.json`. It compares the genetics engine with a
+phenotype-only baseline using Top-K hit rates and mean reciprocal rank.
+
+These results are based on constructed synthetic scenarios. They are software
+evaluation metrics, not clinical accuracy or evidence of diagnostic performance.
+
+### Variant CSV and schema
+
+- `create_csv_schema.py` generates the variant CSV and JSON schema from the
+  bundled synthetic family dataset.
+- `data/synthetic/demo_variants.csv` contains the exported synthetic variant data.
+- `data/synthetic/variant_schema.json` documents the CSV fields and data types.
+
+To regenerate the CSV and schema, run:
+
+```powershell
+python create_csv_schema.py
+```
+
+### Evaluation tests
+
+Run the full Python test suite:
+
+```powershell
+python -m pytest -v
+```
+
+The tests cover the genetics engine, CSV/schema consistency, and ranking
+reproducibility. Benchmark scenarios are synthetic and do not establish
+clinical validity.
