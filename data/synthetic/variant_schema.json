@@ -1,0 +1,27 @@
+{
+  "description": "CSV schema for GENOVA synthetic variant records.",
+  "required_columns": [
+    "id",
+    "gene",
+    "inheritance_mode",
+    "phenotype_terms",
+    "effect_evidence",
+    "frequency_evidence",
+    "genotypes"
+  ],
+  "column_types": {
+    "id": "string",
+    "gene": "string",
+    "inheritance_mode": "string",
+    "phenotype_terms": "JSON array of phenotype identifiers",
+    "effect_evidence": "number",
+    "frequency_evidence": "number",
+    "genotypes": "JSON object mapping family member IDs to genotypes"
+  },
+  "allowed_inheritance_modes": [
+    "autosomal_dominant",
+    "autosomal_recessive",
+    "x_linked"
+  ],
+  "note": "Synthetic demonstration data only; not clinical evidence."
+}

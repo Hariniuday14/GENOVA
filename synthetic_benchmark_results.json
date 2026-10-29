@@ -1,0 +1,23 @@
+{
+  "number_of_cases": 6,
+  "methods": {
+    "genetics_engine": {
+      "top_k_hit_rates": {
+        "top_1": 0.5,
+        "top_3": 1.0,
+        "top_5": 1.0
+      },
+      "mean_reciprocal_rank": 0.75
+    },
+    "phenotype_only_baseline": {
+      "top_k_hit_rates": {
+        "top_1": 0.6667,
+        "top_3": 1.0,
+        "top_5": 1.0
+      },
+      "mean_reciprocal_rank": 0.8333
+    }
+  },
+  "metric_note": "Synthetic benchmark metrics only; not clinical accuracy.",
+  "benchmark_note": "Six constructed synthetic scenarios. Target labels are assumed for software testing and are not independent clinical ground truth. Several scenarios reuse the same underlying family and variant records, so they are not six independent families."
+}
